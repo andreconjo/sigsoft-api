@@ -19,17 +19,21 @@ public class Scene {
     private Integer scale;
     private List<Node> nodes;
     private List<Link> links;
+    private List<String> conflicts;
 
     public Scene() {
     }
 
-    public Scene(String alias, Integer centerX, Integer centerY, Integer scale, List<Node> nodes, List<Link> links) {
+    public Scene(String id, String alias, Integer centerX, Integer centerY, Integer scale,
+                 List<Node> nodes, List<Link> links, List<String> conflicts) {
+        this.id = id;
         this.alias = alias;
         this.centerX = centerX;
         this.centerY = centerY;
         this.scale = scale;
         this.nodes = nodes;
         this.links = links;
+        this.conflicts = conflicts;
     }
 
     public String getId() {
@@ -86,5 +90,13 @@ public class Scene {
 
     public void setLinks(List<Link> links) {
         this.links = links;
+    }
+
+    public List<String> getConflicts() {
+        return conflicts;
+    }
+
+    public void setConflicts(List<String> conflicts) {
+        this.conflicts = conflicts;
     }
 }
