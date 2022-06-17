@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Node {
 
     @Id
-    private Integer id;
+    private Long id;
     private Integer x;
     private Integer y;
     private String type;
@@ -21,7 +21,7 @@ public class Node {
     public Node() {
     }
 
-    public Node(Integer id, Integer x, Integer y, String type, boolean priority, String label, String topic, String satisfact) {
+    public Node(Long id, Integer x, Integer y, String type, boolean priority, String label, String topic, String satisfact) {
         this.id = id;
         this.x = x;
         this.y = y;
@@ -32,11 +32,11 @@ public class Node {
         this.satisfact = satisfact;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
